@@ -10,11 +10,12 @@
       +-------------------------------------------------+
       |                                                 |
       v                                                 v
-3. Send to                                  4. Send to Embedding Model
-   (Gemini)                                    (e.g., Vertex AI, CLIP)
+3. Send to                                        4. Send to Embedding Model
+   (Gemini)                                          (Vertex AI)
       |                                                 |
       | - Pass the image URL + a text prompt            | - Pass the image URL
       | - Receives a text description/analysis          | - Receives a vector embedding [0.1, 0.9, ...]
       v                                                 v
-5. Your Application Logic                           6. Your Vector Database
-   (e.g., show description to user)                    (e.g., save the embedding for search)
+5. Your ApplicationLogic                           6. Your Vector Database
+   ()                                                  (save embedding for search)
+   
