@@ -18,4 +18,26 @@
       v                                                 v
 5. Your ApplicationLogic                           6. Your Vector Database
    ()                                                  (save embedding for search)
-   
+
+
+"""
+The App starts like this when a user send an image with query the backend receives the image file.
+next uploads image to Cloud Storage.
+gets URL for the image
+send the url to gemini to see and extract description from the image 
+send the url to the search tool to make the embedding with vertex multimodal embedding 
+
+
+"""
+
+
+
+
+"""
+
+gemini output to the backend to execute the tools:
+Function call: { id=None args={'a': 57, 'b': 44} name='multiply' }
+Function response: { id=None name='multiply' response={'result': 2508} }
+
+
+"""
