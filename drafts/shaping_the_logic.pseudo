@@ -5,13 +5,13 @@
 2. Your Backend API Endpoint
       |
       | a. Receives the image file
-      | b. Uploads image to Cloud Storage (S3, GCS, etc.)
+      | b. Uploads image to Cloud Storage (S3, GCS)
       | c. Gets a public or pre-signed URL for the image
       +-------------------------------------------------+
       |                                                 |
       v                                                 v
-3. Send to Multimodal LLM                           4. Send to Embedding Model
-   (e.g., Gemini, GPT-4o)                              (e.g., Vertex AI, CLIP)
+3. Send to                                  4. Send to Embedding Model
+   (Gemini)                                    (e.g., Vertex AI, CLIP)
       |                                                 |
       | - Pass the image URL + a text prompt            | - Pass the image URL
       | - Receives a text description/analysis          | - Receives a vector embedding [0.1, 0.9, ...]
