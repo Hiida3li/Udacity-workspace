@@ -35,9 +35,28 @@ send the url to the search tool to make the embedding with vertex multimodal emb
 
 """
 
-gemini output to the backend to execute the tools:
+# gemini output to the backend to execute the tools if sequence:
+
 Function call: { id=None args={'a': 57, 'b': 44} name='multiply' }
 Function response: { id=None name='multiply' response={'result': 2508} }
 
+"""
+2.
+
+"""
+# Gemini output to the app to execute the tools in compostional reasoning mode:
+
+Function call: { id=None args={'location': 'Mountain View, CA', 'description': 'comedy'} name='find_movies' }
+--------------------------------------------------------------------------------
+user:
+Function response: { id=None name='find_movies' response={'result': ['Barbie', 'Oppenheimer']} }
+--------------------------------------------------------------------------------
+model:
+Function call: { id=None args={'location': 'Mountain View, CA', 'movie': 'Barbie'} name='find_theaters' }
+Function call: { id=None args={'movie': 'Oppenheimer', 'location': 'Mountain View, CA'} name='find_theaters' }
+--------------------------------------------------------------------------------
+user:
+Function response: { id=None name='find_theaters' response={'result': ['Googleplex 16', 'Android Theatre']} }
+Function response: { id=None name='find_theaters' response={'result': ['Googleplex 16', 'Android Theatre']} }
 
 """
