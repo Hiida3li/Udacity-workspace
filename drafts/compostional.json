@@ -1,9 +1,5 @@
 
 
-"""
-how the model sequence will be like:
-"""
-
 {
     "comment": "This JSON shows the history of a sequential process.",
     "roundtrips": [
