@@ -60,3 +60,11 @@ Function response: { id=None name='find_theaters' response={'result': ['Googlepl
 Function response: { id=None name='find_theaters' response={'result': ['Googleplex 16', 'Android Theatre']} }
 
 """
+3. 
+---------
+model:
+Function call: { id=None args={'date': '01/01/2025', 'location': 'Mountain View, CA', 'movie': 'Barbie', 'theater': 'Googleplex 16'} name='get_showtimes' }
+Function call: { id=None args={'theater': 'Android Theatre', 'date': '01/01/2025', 'location': 'Mountain View, CA', 'movie': 'Barbie'} name='get_showtimes' }
+Function call: { id=None args={'theater': 'Googleplex 16', 'movie': 'Oppenheimer', 'date': '01/01/2025', 'location': 'Mountain View, CA'} name='get_showtimes' }
+Function call: { id=None args={'theater': 'Android Theatre', 'location': 'Mountain View, CA', 'movie': 'Oppenheimer', 'date': '01/01/2025'} name='get_showtimes' }
+
