@@ -1,0 +1,69 @@
+
+
+"""
+how the model sequence will be like:
+"""
+
+{
+    "comment": "This JSON shows the history of a sequential process.",
+    "roundtrips": [
+      {
+        "roundtrip_number": 1,
+        "your_request_to_model": {
+          "role": "user",
+          "content": "What are the showtimes for the Barbie movie in Muscat today?"
+        },
+        "model_response_to_you": {
+          "role": "model",
+          "content": {
+            "functionCall": {
+              "name": "find_theaters",
+              "args": {
+                "movie": "Barbie",
+                "location": "Muscat, Oman"
+              }
+            }
+          }
+        },
+        "status": "PROCESS PAUSED: The model is now waiting for your app to execute 'find_theaters' and return the result."
+      },
+      {
+        "roundtrip_number": 2,
+        "your_request_to_model": {
+          "role": "user",
+          "content": {
+            "functionResponse": {
+              "name": "find_theaters",
+              "response": {
+                "result": ["VOX Cinemas", "Cinépolis Cinemas"]
+              }
+            }
+          }
+        },
+        "model_response_to_you": {
+          "role": "model",
+          "content": {
+            "functionCall": [
+              {
+                "name": "get_showtimes",
+                "args": {
+                  "theater": "VOX Cinemas",
+                  "movie": "Barbie",
+                  "date": "2025-06-25"
+                }
+              },
+              {
+                "name": "get_showtimes",
+                "args": {
+                  "theater": "Cinépolis Cinemas",
+                  "movie": "Barbie",
+                  "date": "2025-06-25"
+                }
+              }
+            ]
+          }
+        },
+        "status": "PROCESS CONTINUES: The model used the theater list from Roundtrip 1 to create this new request."
+      }
+    ]
+  }
