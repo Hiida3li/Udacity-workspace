@@ -43,7 +43,6 @@ Function response: { id=None name='multiply' response={'result': 2508} }
 2.
 
 """
-# Gemini output to the app to execute the tools in compostional reasoning mode:
 
 Function call: { id=None args={'location': 'Mountain View, CA', 'description': 'comedy'} name='find_movies' }
 --------------------------------------------------------------------------------
