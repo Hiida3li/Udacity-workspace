@@ -35,7 +35,6 @@ send the url to the search tool to make the embedding with vertex multimodal emb
 
 """
 
-# gemini output to the backend to execute the tools if sequence:
 
 Function call: { id=None args={'a': 57, 'b': 44} name='multiply' }
 Function response: { id=None name='multiply' response={'result': 2508} }
