@@ -80,11 +80,11 @@ Function call: { id=None args={'theater': 'Android Theatre', 'location': 'Mounta
     {
       "name": "search_products",
       "args": {
-        "text": "office desk modern style",
+        "text": "table lamp modern style",
         "image": false,
         "image_url": [],
         "filters": {
-          "category": "Office Furniture",
+          "category": "Lightining",
           "price_range": {"min": 0, "max": 500, "operation": "lt"},
           "attributes": {"color": null}
         }
