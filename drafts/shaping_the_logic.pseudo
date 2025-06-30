@@ -66,3 +66,29 @@ Function call: { id=None args={'theater': 'Android Theatre', 'date': '01/01/2025
 Function call: { id=None args={'theater': 'Googleplex 16', 'movie': 'Oppenheimer', 'date': '01/01/2025', 'location': 'Mountain View, CA'} name='get_showtimes' }
 Function call: { id=None args={'theater': 'Android Theatre', 'location': 'Mountain View, CA', 'movie': 'Oppenheimer', 'date': '01/01/2025'} name='get_showtimes' }
 
+=============
+
+{
+  "reasoning": "User wants return info AND product recommendations",
+  "FunctionCall": [
+    {
+      "name": "search_faqs",
+      "args": {
+        "text": "return policy"
+      }
+    },
+    {
+      "name": "search_products",
+      "args": {
+        "text": "office desk modern style",
+        "image": false,
+        "image_url": [],
+        "filters": {
+          "category": "Office Furniture",
+          "price_range": {"min": 0, "max": 500, "operation": "lt"},
+          "attributes": {"color": null}
+        }
+      }
+    }
+  ]
+}
