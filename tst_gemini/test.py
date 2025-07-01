@@ -19,7 +19,7 @@ def connect_to_milvus():
 
 
 class ProductSupportAgent:
-    """Agent that processes customer queries using GPT-4o-mini and searches Milvus for relevant products."""
+    """Agent that processes customer queries using gemini-2.5-flash and searches Milvus for relevant products."""
 
     def __init__(self):
         self.milvus_client = connect_to_milvus()
