@@ -19,7 +19,14 @@ def connect_to_milvus():
 
 
 class ProductSupportAgent:
-    """Agent that processes customer queries using gemini-2.5-flash and call tools to search Milvus database for products or answering FAQs."""
+    """
+    AI agent that handles customer queries using the Gemini-2.5-Flash model.
+
+    This agent intelligently processes requests to either:
+    - Search the Milvus database for relevant products using hybrid (text/image) search.
+    - Answer frequently asked questions based on predefined knowledge or model output.
+    """
+
 
     def __init__(self):
         self.milvus_client = connect_to_milvus()
