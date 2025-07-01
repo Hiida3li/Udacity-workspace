@@ -5,7 +5,7 @@ from pymilvus import MilvusClient
 load_dotenv()
 
 def connect_to_milvus():
-    """Connect to Milvus database """
+    """Connect to Milvus database."""
 
     milvus_uri = os.getenv("MILVUS_URI")
     token = os.getenv("MILVUS_TOKENS")
